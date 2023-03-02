@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi propio formulario en html</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://es.seaicons.com/wp-content/uploads/2022/03/shamrock-lucky-icon.png">
+    <!--Sé que la imagen de favicon tenía que ser .ico, pero funcionó con .png-->
+    
+    <link rel="stylesheet" type="text/css" href="css/my_own_style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Curriculum Vitae" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content=" http://www.example.com" />
+    <meta property="og:image" content="https://es.seaicons.com/wp-content/uploads/2022/03/shamrock-lucky-icon.png" />
+    <meta property="og:description" content="Este es un documento para CV" />
+
+</head>
+
+<body>
+
+    <header class="arribaYAbajo">
+       
+        <div style="width:203px;max-width:100%;color:transparent;text-align:center;;">
+            <div style="height:0;padding-bottom:65.02%;position:relative;text-align:center;">
+                <iframe width="203" height="132" style="position:absolute;top:0;width:100%;height:100%;text-align: center;" frameBorder="2px" src="https://imgflip.com/embed/79se4d">
+                </iframe>
+            </div>
+        </div>
+       
+        <h1>Curriculum Vitae</h1>
+             
+        <label>Música opcional: <strong>Edvard Grieg - Morning Mood</strong> </label><br><br>
+        <audio id="main-audio" preload autoplay controls>
+            <source src="https://play.publicradio.org/web/o/minnesota/classical/programs/free-downloads/2016/06/21/daily_download_20160621_128.mp3" type="audio/mpeg">
+            Su navegador no soporta el formato del audio.
+        </audio><br><br>
+
+         <p>Por favor, complete el siguiente formulario:</p>
+
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7 col-md-8">
+            
+                <article>
+
+                    <form action="action_page.php" method="post">
+                        <fieldset>
+                            <legend>Datos personales:</legend>
+                            <!-- Utilicé la pág randomuser.me para completar el placeholder por ejemplo en lugar de "Ingrese su nombre"-->
+                            
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" placeholder="Kenzi" required/><br><br>
+                            
+                            <label>Apellido</label>
+                            <input type="text" name="apellido" placeholder="Baker" required/><br><br>
+
+                            <label>Nacionalidad</label>
+                            <input type="text" name="nacionalidad" placeholder="Argentina" required/><br><br>
+                            
+                            <label>E-mail</label>
+                            <input type="email" name="email" placeholder="kenzi.baker@example.com"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br><br>
+                            
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" placeholder="dd / mm / aa" required/><br><br>
+                                                        
+                            
+                            <label for="nivel">Nivel de Inglés:</label>
+                            <select id="nivel" name="nivel">
+                                <option value=" " selected></option>
+                                <option value="principiante">Principiante</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="avanzado">Avanzado</option>
+                                <option value="experto">Experto</option>
+                            </select><br><br>
+                            
+                            <label>Descripción</label><br>
+                            <textarea name="mensaje" position="left" rows="6" cols="30">Cuéntanos algo sobre ti.</textarea><br>
+                            
+                            <button type="button" id="boton1">¿Qué debería escribir?</button>
+                            <script src="js/my_own_js.js"></script><br><br>
+                            <div id="ayudita" style="display:none";>
+                                <ul>
+                                    <li>Otros datos personales</li>
+                                    <li>Talentos o habilidades</li>
+                                    <li>Formación académica</li>
+                                    <li>Experiencia laboral</li>
+                                    <li>Referencias</li>
+                                </ul>
+                            </div> 
+                            
+                            <label>¿Cuál es su navegador favorito?</label>
+                            <input list="navegadores">
+                            <datalist id="navegadores" size="5">
+                                <option value="Internet Explorer">
+                                <option value="Firefox">
+                                <option value="Chrome">
+                                <option value="Opera">
+                                <option value="Safari">
+                            </datalist><br><br>
+                            
+                            <label>¿Qué computadora prefiere usar?</label><br>
+                            <video class="paraVideos" width="190" height="110" poster="https://cdn-icons-png.flaticon.com/512/4703/4703650.png" loop playsinline controls preload autoplay muted name="video1">
+                                <source src="https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQD3AqHu2Uby-dpoX1sTZToypUFpK_qQkdZaQ" type="video/mp4">
+                                Su navegador no soporta el formato del video.
+                            </video>
+                            <video class="paraVideos" width="190px" height="110" poster="https://i.pinimg.com/564x/93/49/db/9349db88426f7e5a9a7fbe45fa79e480.jpg" loop playsinline controls preload autoplay muted name="video2">
+                                <source src="https://static.videezy.com/system/resources/previews/000/020/032/original/Diana_Cropped_20.mp4" type="video/mp4">
+                                <source src="https://static.videezy.com/system/resources/previews/000/020/032/original/Diana_Cropped_20.ogg" type="video/ogg">
+                                Su navegador no soporta el formato del video.
+                            </video><br>
+                            <p>
+                                <label for="computadora1"> Prefiero computadora de escritorio </label>
+                                <input type="checkbox" id="computadora1" name="computadora1" value="PC">&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <label for="computadora2"> Prefiero laptop </label>
+                                <input type="checkbox" id="computadora2" name="computadora2" value="Laptop">
+                            </p><br>
+                            
+                            <button type="button" id="boton2">Haz un click</button>
+                            <script src="js/my_own_js.js"></script><br><br>
+                            
+                            <input type="submit" value="Enviar" />
+                        </fieldset>
+                    </form>
+
+                </article>
+                
+
+            </div>
+            <div class="col-5 col-md-4">
+
+                <aside>
+        
+                    <label id="publicidad" font-size="8px">Auspiciado por:</label><br>
+                    <img class="paraImagen" source src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi86yqkSk1K3sJapGS_jwnW7e4Dmuj8mVgiA&amp;usqp=CAU" alt="Imagen de heladería" width="100px" /><br>
+                    <img class="paraImagen" source src="https://scontent.feze4-1.fna.fbcdn.net/v/t39.30808-6/322708505_3443031559274137_604466299281244038_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFbFMHUz73dHYmBVQqQw3lxyymkEBPqDDnLKaQQE-oMOfzvDyWlzpKScQD8kiuFXbs&_nc_ohc=RA2PQJNzwhAAX_vhChp&_nc_ht=scontent.feze4-1.fna&oh=00_AfDhb4MqaBkxpD5alaVzq_s6GWCNQRh3AQdmgtCkoAhzNw&oe=64041155" alt="Imagen de helado" width="100px" /><br>
+                    <img class="paraImagen" source src="https://scontent.feze4-1.fna.fbcdn.net/v/t1.6435-9/131211969_2711688905827160_8892405818644136238_n.jpg?stp=dst-jpg_p180x540&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=8bfeb9&amp;_nc_eui2=AeEvnTitqWgeUn2m0W2NtsZzaQu4zagCa3dpC7jNqAJrdyVEpNV0B9PPAuWgUOyV1hs&amp;_nc_ohc=UvCxEjAbJQIAX8Omq1B&amp;_nc_ht=scontent.feze4-1.fna&amp;oh=00_AfBwVbEMvPzCeMcI8ETqhkIGlgdmEzP5qv-OEK4qCoS4qA&amp;oe=6427739C" alt="Imagen de se busca empleado" width="100px" /><br>
+                    <p> Heladería</p>
+                    <p>Bossini 325, M. Acosta, Bs.As.</p>   
+                    <p>Contacto: +54 9 11 3373-2175</p>
+                    <p>fenicehelados@gmail.com</p>
+                
+                </aside>
+
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    
+
+</body>
+
+
+<footer class="arribaYAbajo">
+    <p>Author:Cecilia Diaz de Berlot</p>
+    <p><a href="mailto:hege@example.com">incognoscible1903@gmail.com</a></p>
+</footer>
+
+
+</html>
